@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TIFFIN SHARE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/jpeg" href="fav.jpg" />
+</head>
+<body class="customer-page">
+  <header class="site-header modern">
+    <div class="brand">
+      <h1>TIFFIN SHARE</h1>
+      <p class="tag">Fresh meals delivered daily</p>
+    </div>
+    <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav">
+      <a href="orders.html" data-i18n="orders">Orders</a>
+      <a href="about.html" data-i18n="about">How it Works</a>
+    </nav>
+    <div class="lang-selector">
+      <select id="lang-select">
+        <option value="en">English</option>
+        <option value="hi">हिंदी</option>
+        <option value="ta">தமிழ்</option>
+        <option value="te">తెలుగు</option>
+        <option value="gu">ગુજરાતી</option>
+      </select>
+    </div>
+  </header>
+
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+  <aside class="mobile-nav-panel" id="mobile-nav-panel" aria-label="Mobile navigation">
+    <div class="mobile-nav-header">
+      <span data-i18n="menuNav">Menu</span>
+      <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="orders.html" data-i18n="orders">Orders</a>
+      <a href="about.html" data-i18n="about">How it Works</a>
+    </nav>
+    <div class="mobile-lang-wrap">
+      <label data-i18n="languageLabel">Language</label>
+      <select id="mobile-lang-select">
+        <option value="en">English</option>
+        <option value="hi">हिंदी</option>
+        <option value="ta">தமிழ்</option>
+        <option value="te">తెలుగు</option>
+        <option value="gu">ગુજરાતી</option>
+      </select>
+    </div>
+  </aside>
+
+  <main>
+    <section id="welcome-intro" class="container">
+      <div class="card brand-panel">
+        <div class="welcome-intro">
+          <span class="mini-badge" data-i18n="welcomeBadge">Welcome</span>
+          <h2 data-i18n="welcomeTitle">Fresh home-cooked meals, made for your neighborhood</h2>
+          <p class="muted" data-i18n="welcomeText">TIFFIN SHARE brings together home chefs and local food lovers with daily, wholesome meals that are affordable, fresh, and made with care. From comforting classics to balanced daily specials, we help you enjoy homemade food without the hassle of cooking.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="location-menu" class="container">
+      <div class="card brand-panel">
+        <div class="section-heading-row">
+          <div>
+            <span class="mini-badge" data-i18n="findYourArea">Find your area</span>
+            <h2 data-i18n="selectDeliveryArea">Select your delivery area</h2>
+          </div>
+        </div>
+        <p class="muted" data-i18n="chooseLocationPrompt">Choose a location to see the meals available for that zone.</p>
+
+        <div id="location-grid" class="location-grid"></div>
+
+        <div id="menu-panel" class="menu-panel hidden">
+          <div class="menu-header">
+            <div>
+              <p class="eyebrow" data-i18n="todaysMenu">Today’s menu</p>
+              <h3 id="selected-location-title" data-i18n="selectLocation">Select a location</h3>
+            </div>
+            <button id="change-location" class="btn small" type="button" data-i18n="changeLocation">Change location</button>
+          </div>
+
+          <div class="filters" id="menu-filters">
+            <button data-filter="all" class="filter active" type="button" data-i18n="all">All</button>
+            <button data-filter="veg" class="filter" type="button" data-i18n="veg">Veg</button>
+            <button data-filter="non-veg" class="filter" type="button" data-i18n="nonVeg">Non-Veg</button>
+            <button data-filter="jain" class="filter" type="button" data-i18n="jain">Jain</button>
+          </div>
+
+          <div id="menu-grid" class="menu-grid modern-grid"></div>
+
+          <div class="bottom-row">
+            <div class="selection card small">
+              <h3 data-i18n="yourSelection">Your Selection</h3>
+              <p id="current-selection" data-i18n="noSelection">No selection yet</p>
+              <p id="selection-count" class="muted">0/3 selected</p>
+            </div>
+            <div class="card small">
+              <h3 data-i18n="cart">Cart</h3>
+              <p class="muted" data-i18n="itemsInCart">Items in cart reflect your current selection.</p>
+              <button id="place-order" class="cta" type="button" data-i18n="placeOrder">Place Order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why" class="card container">
+      <h2 data-i18n="whyChooseUs">Why Choose Us?</h2>
+      <div class="value-grid modern-grid">
+        <div class="value-card">
+          <h3 data-i18n="homemadeQuality">🍳 Homemade Quality</h3>
+          <p class="muted" data-i18n="homemadeDesc">Every meal is freshly prepared in-house by a skilled chef who cares about every detail.</p>
+        </div>
+        <div class="value-card">
+          <h3 data-i18n="freshDaily">✨ Fresh Daily</h3>
+          <p class="muted" data-i18n="freshDesc">New menu every day. No leftovers, no compromises. Just today's best offerings.</p>
+        </div>
+        <div class="value-card">
+          <h3 data-i18n="reliableDelivery">📦 Reliable Delivery</h3>
+          <p class="muted" data-i18n="reliableDesc">Order once, get it every day. Simple, consistent, and always on time.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta-section" class="container">
+      <h2 style="text-align:center;margin-bottom:24px" data-i18n="getStarted">Get Started</h2>
+      <div class="action-cards">
+        <a href="orders.html" class="action-card">
+          <h3 data-i18n="yourOrders">Your Orders</h3>
+          <p data-i18n="manageOrders">View and manage your placed orders</p>
+          <span class="arrow">→</span>
+        </a>
+        <a href="about.html" class="action-card">
+          <h3 data-i18n="learnMore">Learn More</h3>
+          <p data-i18n="meetTeam">Meet the team and our mission</p>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div id="checkout-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-overlay"></div>
+    <div class="modal-card" role="dialog" aria-modal="true">
+      <h3 data-i18n="placeOrder">Place Order</h3>
+      <p id="checkout-total" class="checkout-total" data-i18n="total">Total</p>
+      <form id="checkout-form">
+        <div class="form-group">
+          <label for="order-name" data-i18n="yourName">Your Name</label>
+          <input type="text" id="order-name" required placeholder="Enter your full name" />
+        </div>
+        <div class="form-group">
+          <label for="order-phone" data-i18n="phoneNumber">Phone Number</label>
+          <input type="tel" id="order-phone" required placeholder="10-digit mobile number" />
+        </div>
+        <div class="form-group">
+          <label for="order-address" data-i18n="address">Delivery Address</label>
+          <textarea id="order-address" required placeholder="Full address with street, area, and postal code" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label data-i18n="paymentMethod">Payment Method</label>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="payment" value="cod" checked />
+              <span data-i18n="cod">Cash on Delivery</span>
+            </label>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn small" id="checkout-cancel" data-i18n="cancel">Cancel</button>
+          <button type="submit" class="btn small danger" data-i18n="confirmOrder">Confirm Order</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="order-success-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-overlay"></div>
+    <div class="modal-card success-card" role="dialog" aria-modal="true">
+      <div class="success-icon" aria-hidden="true">✓</div>
+      <h3 data-i18n="orderPlaced">Order placed</h3>
+      <p id="order-success-message" class="muted"></p>
+      <div class="modal-actions">
+        <button type="button" class="btn small" id="order-success-close" data-i18n="cancel">Close</button>
+        <a class="btn small danger" href="orders.html" data-i18n="viewOrders">View Orders</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <footer>
+    <p data-i18n="copyright">&copy; TIFFIN SHARE</p>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="i18n.js"></script>
+  <script src="backend.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>How It Works — TIFFIN SHARE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/jpeg" href="fav.jpg" />
+</head>
+<body>
+  <header class="site-header modern">
+    <div class="brand">
+      <h1>TIFFIN SHARE</h1>
+      <p class="tag">About Us</p>
+    </div>
+    <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav">
+      <a href="index.html" data-i18n="home">Home</a>
+      <a href="orders.html" data-i18n="orders">Orders</a>
+    </nav>
+    <div class="lang-selector">
+      <select id="lang-select">
+        <option value="en">English</option>
+        <option value="hi">हिंदी</option>
+        <option value="ta">தமிழ்</option>
+        <option value="te">తెలుగు</option>
+        <option value="gu">ગુજરાતી</option>
+      </select>
+    </div>
+  </header>
+
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+  <aside class="mobile-nav-panel" id="mobile-nav-panel" aria-label="Mobile navigation">
+    <div class="mobile-nav-header">
+      <span>Menu</span>
+      <button class="mobile-nav-close" aria-label="Close menu">✕</button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="index.html" data-i18n="home">Home</a>
+      <a href="orders.html" data-i18n="orders">Orders</a>
+    </nav>
+    <div class="mobile-lang-wrap">
+      <label>Language</label>
+      <select id="mobile-lang-select">
+        <option value="en">English</option>
+        <option value="hi">हिंदी</option>
+        <option value="ta">தமிழ்</option>
+        <option value="te">తెలుగు</option>
+        <option value="gu">ગુજરાતી</option>
+      </select>
+    </div>
+  </aside>
+
+  <main class="container">
+    <section class="card">
+      <h2>About TIFFIN SHARE</h2>
+      <p>TIFFIN SHARE is a food-tech startup redefining how communities discover and enjoy homemade meals. We create a trusted digital marketplace where home cooks, local chefs, and everyday food lovers connect in one seamless experience.</p>
+      <p>Our mission is simple: give passionate food creators a platform to grow their home-based kitchen businesses while helping customers access fresh, affordable, authentic meals from nearby kitchens they can trust.</p>
+    </section>
+
+    <section class="card">
+      <h2>How It Works</h2>
+      <ul>
+        <li><strong>Home chefs showcase their meals:</strong> Independent cooks list dishes prepared with care and authenticity.</li>
+        <li><strong>Customers choose by location:</strong> Users browse local kitchens and discover meals available in their area.</li>
+        <li><strong>Orders are placed in minutes:</strong> A simple ordering flow makes it easy to select favorites and complete checkout.</li>
+        <li><strong>Fresh food reaches the doorstep:</strong> Meals are delivered with convenience, trust, and community-first service.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Our Mission</h2>
+      <p>To make homemade food more accessible, more scalable, and more trusted — while helping small home kitchens build sustainable businesses and reach a broader audience.</p>
+      <h3>Our Vision</h3>
+      <p>To build a thriving food community where every neighborhood has access to delicious home-cooked meals and every home cook has the tools to grow with confidence.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p data-i18n="copyright">&copy; TIFFIN SHARE</p>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
